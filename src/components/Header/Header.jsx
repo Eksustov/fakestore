@@ -1,6 +1,7 @@
 import './Header.css'
+import SearchBar from "../../components/SearchBar/SearchBar.jsx"
 
-function Header() {
+function Header({ onSearch }) {
 
   return (
     <>
@@ -9,6 +10,9 @@ function Header() {
             <div>
                 <h1 className="header-text">FakeStore</h1>
                 <p className="header-undertext">Lidojošā paparde</p>
+            </div>
+            <div className="header-search">
+              <SearchBar onSearch={onSearch} />
             </div>
         </div>
     </>

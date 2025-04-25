@@ -1,4 +1,6 @@
 import './ProductCard.css'
+import Button from '../../components/Button/Button.jsx'
+import Rating from '../../components/Rating/Rating.jsx';
 
 function ProductCard({ product }) {
   return (
@@ -8,7 +10,10 @@ function ProductCard({ product }) {
       <p className="description">{product.description}</p>
       <p className="category">{product.category}</p>
       <p className="price">{product.price}€</p>
-      <p className="rating">{product.rating.rate}🌟 ({product.rating.count} reviews)</p>
+      <Button />
+      <div className="rating">
+        <Rating value={product.rating.rate} /> ({product.rating.count} reviews)
+      </div>
     </div>
   )
 }
